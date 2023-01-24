@@ -39,4 +39,28 @@ class PlushStore{
             return _debt;
         }
 
+        unsigned int        make_plush(unsigned int cashPrice){
+            //_money -= cashPrice;
+            int failliteOrNo = _money;
+            failliteOrNo -= cashPrice;
+            if(failliteOrNo > 0){
+                //Tout va bien la belle vie
+                _stockSize += 1;
+                _money -= cashPrice;
+                return 1;
+            }
+            else if(failliteOrNo < 0 && failliteOrNo > _debt*(-1)){
+                //Faut commence à se poser des questions Buddy
+                _stockSize +=1;
+                return 2;
+            }
+            else{
+                //Bon c'est la D
+                return 3;
+            }
+            
+            _money -= cashPrice;
+            return 1;
+        }
+
 };
