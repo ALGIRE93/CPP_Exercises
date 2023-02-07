@@ -12,8 +12,9 @@ class Pokeball
         PokemonPtr _pokemon;
 
     public: 
-        Pokeball()
-        {}
+        const Pokemon& pokemon() const{
+            return *_pokemon;
+        }
 
         bool empty() const{
             return _pokemon == nullptr;
