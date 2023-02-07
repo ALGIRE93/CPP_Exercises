@@ -1,7 +1,7 @@
 #pragma once
 
-#include <iostream>
 #include <Pokemon.h>
+#include <memory>
 
 using namespace std;
 
@@ -9,14 +9,18 @@ using namespace std;
 class Pokeball
 {
     private:
-        bool _empty = true;
+        PokemonPtr _pokemon;
 
     public: 
         Pokeball()
         {}
 
         bool empty() const{
-            return _empty;
+            return _pokemon == nullptr;
+        }
+
+        void store(PokemonPtr pokemon){
+            _pokemon = move(pokemon);
         }
 
 
