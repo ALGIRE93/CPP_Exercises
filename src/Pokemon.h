@@ -21,10 +21,15 @@ class Pokemon
 
         Pokemon(const Pokemon& other)
             : _name {other._name}
+            , _id { incr_id++ }
         {}
 
-        string name() const{
+        const string name() const{
             return _name;
+        }
+
+        int id() const{
+            return _id;
         }
 
         
