@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <iostream>
+#include <memory>
 
 using namespace std;
 
@@ -35,3 +35,5 @@ class Pokemon
         
 
 };
+
+using PokemonPtr = unique_ptr<Pokemon>;
