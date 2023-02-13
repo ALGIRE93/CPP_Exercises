@@ -9,7 +9,7 @@ using namespace std;
 class Pokemon
 {
     private :
-        const string _name;
+        string _name;
         unsigned int _id = 0;
         unsigned int incr_id = 0;
     
@@ -30,6 +30,13 @@ class Pokemon
 
         int id() const{
             return _id;
+        }
+
+        Pokemon& operator=(const Pokemon& other){
+            if(this != &other){
+                _name = other._name;
+            }
+            return *this;
         }
 
         
