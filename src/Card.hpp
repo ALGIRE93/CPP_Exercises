@@ -39,19 +39,19 @@ class Card {
         , _cardType { cardType }
         {}
 
-        string get_id(){
+        string get_id() const{
             return _id;
         }
 
-        CardType get_type(){
+        CardType get_type() const{
             return _cardType;
         }
 
-        string get_name(){
+        string get_name() const{
             return _name;
         }
 
-        string get_description(){
+        string get_description() const{
             return _description;
         }
 
