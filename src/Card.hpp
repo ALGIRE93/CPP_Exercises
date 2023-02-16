@@ -5,25 +5,17 @@
 using namespace std;
 
 
-enum CardType { Monster, Spell, Trap};
+enum class CardType { Monster, Spell, Trap};
 
 string to_string(CardType cardType){
     string res ="";
     switch (cardType)
     {
-    case Monster/* constant-expression */:
-        /* code */
-        res = "Monster";
-        break;
-    case Spell:
-        res = "Spell";
-        break;
-    
-    default:
-        res = "Trap";
-        break;
+    case CardType::Monster : return "Monster";
+    case CardType::Spell: return "Spell";
+    case CardType::Trap : return "Trap";
+    default:return "";
     }
-    return res;
 };
 
 class Card {
