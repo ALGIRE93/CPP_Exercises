@@ -8,7 +8,9 @@ class Leaf : public Node
     private :
 
     protected :
-        Leaf();
+        Leaf(NodeKind nodeKind)
+            : Node {nodeKind}
+        {}
 
     public :
 
