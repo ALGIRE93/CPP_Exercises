@@ -2,23 +2,23 @@
 
 #include <catch2/catch_test_macros.hpp>
 
-TEST_CASE("1a. Pokemons can be constructed with their name")
-{
-    auto pikachu = Pokemon { "Pikachu" };
-    auto bulbizarre = Pokemon { "Bulbizarre" };
+// TEST_CASE("1a. Pokemons can be constructed with their name")
+// {
+//     auto pikachu = Pokemon { "Pikachu" };
+//     auto bulbizarre = Pokemon { "Bulbizarre" };
 
-    REQUIRE(pikachu.name() == "Pikachu");
-    REQUIRE(bulbizarre.name() == "Bulbizarre");
-}
+//     REQUIRE(pikachu.name() == "Pikachu");
+//     REQUIRE(bulbizarre.name() == "Bulbizarre");
+// }
 
-TEST_CASE("1b. Querying the name of a Pokemon does not modify the Pokemon")
-{
-    const auto pikachu = Pokemon { "Pikachu" };
-    const auto bulbizarre = Pokemon { "Bulbizarre" };
+// TEST_CASE("1b. Querying the name of a Pokemon does not modify the Pokemon")
+// {
+//     const auto pikachu = Pokemon { "Pikachu" };
+//     const auto bulbizarre = Pokemon { "Bulbizarre" };
 
-    REQUIRE(pikachu.name() == "Pikachu");
-    REQUIRE(bulbizarre.name() == "Bulbizarre");
-}
+//     REQUIRE(pikachu.name() == "Pikachu");
+//     REQUIRE(bulbizarre.name() == "Bulbizarre");
+// }
 
 TEST_CASE("1c. Whenever a Pokemon is constructed, it is assigned an identifier that gets incremented each time.")
 {

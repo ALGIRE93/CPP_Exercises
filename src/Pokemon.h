@@ -2,6 +2,7 @@
 
 #include <string>
 #include <memory>
+#include <iostream>
 
 using namespace std;
 
@@ -10,12 +11,12 @@ class Pokemon
 {
     private :
         string _name;
-        unsigned int _id = 0;
-        unsigned int incr_id = 0;
+        int _id = 0;
+        static inline int incr_id = 0;
     
     public :
         Pokemon(const string& name)
-            : _name {name}
+            : _name { name }
             , _id { incr_id++ }
         {}
 
@@ -24,11 +25,12 @@ class Pokemon
             , _id { incr_id++ }
         {}
 
-        const string name() const{
+        const string& name() const{
             return _name;
         }
 
         int id() const{
+            //cout << _name << "+" << _id << endl;
             return _id;
         }
 
