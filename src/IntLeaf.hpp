@@ -26,6 +26,6 @@ class IntLeaf : public Leaf {
             return to_string(_data);
         }
 
-        //static unique_ptr<IntLeaf> make_ptr(int data);
+        static unique_ptr<IntLeaf> make_ptr(int data); // cette ligne place leaf en redéfinition
 
 };

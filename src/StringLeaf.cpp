@@ -18,6 +18,6 @@ string StringLeaf::print() const{
     return result;
 }
 
-// unique_ptr<StringLeaf> StringLeaf::make_ptr(string data){
-//     return make_unique<StringLeaf>(data);
-// }
+NodePtr StringLeaf::make_ptr(string data){
+    return make_unique<StringLeaf>(data);
+}
