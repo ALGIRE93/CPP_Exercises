@@ -6,6 +6,8 @@
 #include "Node.hpp"
 #include "Leaf.hpp"
 
+using namespace std;
+
 class IntLeaf : public Leaf {
     private :
         int _data;
@@ -13,8 +15,7 @@ class IntLeaf : public Leaf {
     public :
         IntLeaf(int data)
             :  Leaf { NodeKind::INT }
-            , _data { data }
-            
+            , _data { data }   
         {}
 
         inline const int& data() const {

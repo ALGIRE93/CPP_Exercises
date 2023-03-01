@@ -3,22 +3,25 @@
 #include <iostream>
 #include <string>
 
+#include "Node.hpp"
 #include "Leaf.hpp"
-
 
 using namespace std;
 
-class StringLeaf : public Leaf
-{
+class StringLeaf : public Leaf{
     private :
         string _data;
 
-    protected :
+    public :
         StringLeaf(string data)
-        : Leaf { NodeKind::STRING }
-        , _data { data }
+            : Leaf { NodeKind::STRING }
+            , _data { data }
         {}
 
-        string print() const override;
+        const string& data() const{
+            return _data;
+        }
+
+        string print() const override; // regarder StringLeaf.cpp
         
 };
