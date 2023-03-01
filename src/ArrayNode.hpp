@@ -10,7 +10,7 @@ using namespace std;
 class ArrayNode : public Node
 {
     private :
-        vector<NodePtr> _data; //besoin d'un unique_ptr dans Node
+        //vector<NodePtr> _data; //besoin d'un unique_ptr dans Node
     public :
         ArrayNode()
             : Node(NodeKind::ARRAY)
