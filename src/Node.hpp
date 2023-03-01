@@ -3,6 +3,7 @@
 #include <iostream>
 #include "InstanceCounter.hpp"
 #include "NodeKind.hpp"
+#include <memory>
 
 using namespace std;
 
@@ -25,4 +26,6 @@ class Node : public InstanceCounter
 
 
 };
+
+using NodePtr = unique_ptr<Node>;
 
