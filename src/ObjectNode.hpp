@@ -16,4 +16,6 @@ class ObjectNode : public Node
 
         string print() const override;
 
+        static NodePtr make_ptr();
+
 };

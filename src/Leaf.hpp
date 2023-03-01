@@ -3,15 +3,22 @@
 
 using namespace std;
 
+class Leaf : public Node {
+    protected :
+        Leaf(NodeKind nodeKind)
+            : Node { nodeKind }
+        {}
+};
+/*
 class Leaf : public Node
 {
-    private :
+
 
     protected :
         Leaf(NodeKind nodeKind)
             : Node {nodeKind}
         {}
 
-    public :
 
-};
+
+};*/

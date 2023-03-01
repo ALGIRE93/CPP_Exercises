@@ -8,3 +8,7 @@ string ObjectNode::print() const{
     result += "}";
     return result;
 }
+
+NodePtr ObjectNode::make_ptr(){
+    return make_unique<ObjectNode>();
+}

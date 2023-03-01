@@ -22,6 +22,8 @@ class Node : public InstanceCounter
             return _nodeKind;
         }
 
+        virtual ~Node() = default; // déconstructeur
+
         virtual string print() const = 0;
 
 

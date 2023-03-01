@@ -11,3 +11,7 @@ string ArrayNode::print() const{
     result += ']';
     return result;
 }
+
+NodePtr ArrayNode::make_ptr(){
+    return make_unique<ArrayNode>();
+}
