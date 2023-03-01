@@ -9,6 +9,6 @@ string ObjectNode::print() const{
     return result;
 }
 
-NodePtr ObjectNode::make_ptr(){
+unique_ptr<ObjectNode> ObjectNode::make_ptr(){
     return make_unique<ObjectNode>();
 }

@@ -18,5 +18,5 @@ class ArrayNode : public Node
 
         string print() const override;
 
-        static NodePtr make_ptr();
+        static unique_ptr<ArrayNode> make_ptr();
 };

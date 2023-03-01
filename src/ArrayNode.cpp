@@ -12,6 +12,6 @@ string ArrayNode::print() const{
     return result;
 }
 
-NodePtr ArrayNode::make_ptr(){
+unique_ptr<ArrayNode> ArrayNode::make_ptr(){
     return make_unique<ArrayNode>();
 }
