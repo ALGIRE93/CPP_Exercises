@@ -24,6 +24,6 @@ class StringLeaf : public Leaf{
 
         string print() const override; // regarder StringLeaf.cpp
 
-        static unique_ptr<StringLeaf> make_ptr(string data);
+        //static unique_ptr<StringLeaf> make_ptr(string data);
         
 };
