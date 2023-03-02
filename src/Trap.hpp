@@ -40,6 +40,7 @@ class Trap : public Card
             , _trapType { trapType }
         {
             set_name( name );
+            _symbol = u8"罠";
         }
 
         TrapType get_trap_type(){

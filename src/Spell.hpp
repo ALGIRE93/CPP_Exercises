@@ -44,6 +44,7 @@ class Spell : public Card
             , _spellType { spellType }
         {
             set_name( name );
+            _symbol = u8"魔";
         }
 
         SpellType get_spell_type(){

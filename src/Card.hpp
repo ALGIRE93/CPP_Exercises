@@ -29,6 +29,9 @@ string to_string(CardType type)
 
 class Card
 {
+    protected :
+        string _symbol;
+
     private :
         string _id;
         CardType _cardType;
@@ -63,6 +66,10 @@ class Card
 
         void set_description(string description){
             _description = description;
+        }
+
+        string get_symbol() const{
+            return _symbol;
         }
 
 
