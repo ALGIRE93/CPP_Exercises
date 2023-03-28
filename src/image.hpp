@@ -41,7 +41,7 @@ struct Image{
             return _data[j][i];
         }
 
-        // Image(const function<P(const size_t, const size_t)>& functor){
+        // Image<P, W, H>(const function<P(const size_t, const size_t)>& functor){
         //     for(size_t j = 0; j < H; j++){
         //         for(size_t i = 0; i < W; i++){
         //             (*this)(i,j) = functor(i,j);
@@ -50,3 +50,14 @@ struct Image{
         // }
 
 };
+
+template<typename P, size_t W, size_t H>
+Image<P, W, H> operator+(const Image<P,W,H>& image1, const Image<P,W,H>& image2){
+    Image<P,W,H> res = {};
+    for(size_t j = 0; j < H; j++){
+        for(size_t i = 0; i < W; i++){
+            res(i,j) = image1(i,j) + image2(i,j);
+        }
+    }
+    return res;
+}
