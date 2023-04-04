@@ -61,23 +61,25 @@ Person1 cn{celine+" "+noel};
 In each of the following case:
 
 - Q22.1 (Youssef):
-  * a. Is the content of string `youssef_bergeron_name` copied to call `Person1(const std::string& name)`?
-  * b. Is it copied to execute  `_name { name }` ?
-  * c. How many copies in total? Are some copy unnecessary ?
+  * a. Is the content of string `youssef_bergeron_name` copied to call `Person1(const std::string& name)`? Y
+  * b. Is it copied to execute  `_name { name }` ? Y
+  * c. How many copies in total? Are some copy unnecessary ? 1, No On peut réutiliser la string
 - Q22.2 (Clément):
-  * a. Is the content of string `clement_chomicki_name` copied to call `Person1(const std::string& name)`?
-  * b. Is it copied to execute  `_name { name }` ?
-  * c. How many copies in total? Are some copy unnecessary ?
+  * a. Is the content of string `clement_chomicki_name` copied to call `Person1(const std::string& name)`? Y
+  * b. Is it copied to execute  `_name { name }` ? Y
+  * c. How many copies in total? Are some copy unnecessary ? 1, Y (excessif)
 - Q22.3 (Victor): 
-  * a. What is the type of the expression `"Victor Marsault"`
+  * a. What is the type of the expression `"Victor Marsault"` c-string, tableau de caractère avec un \0 en fin
+  il en fait une copie pour l'exprimer en string et place une réf dessus entre le début du tab et cette même string
   * b. Is it copied to call `Person1(const std::string& name)`?
-  * c. Is it copied to execute  `_name { name }` ?
-  * d. How many copies in total? Are some copy unnecessary ?
+  On va avoir 2 copie et l'une est inutile
+  * c. Is it copied to execute  `_name { name }` ? Y
+  * d. How many copies in total? Are some copy unnecessary ? 2, 1
 - Q22.4 (Céline)
-  * a. What is the type of the expression `celine+" "+noel` ?
-  * b. Is its content copied to call `Person1(const std::string& name)`?
-  * c. Is it copied to execute `_name { name }` ?
-  * d. How many copies in total? Are some copy unnecessary ?
+  * a. What is the type of the expression `celine+" "+noel` ? string
+  * b. Is its content copied to call `Person1(const std::string& name)`? Y
+  * c. Is it copied to execute `_name { name }` ? Y
+  * d. How many copies in total? Are some copy unnecessary ? 2, 1
 
 
 [Optional] What about `std::string_view` ?
@@ -108,8 +110,8 @@ but then
  
 
 Q22.5: 
-  * a. Which copy from which case did it prevent?
-  * b. Are there unnecessary copies in some cases?
+  * a. Which copy from which case did it prevent? c-string and string
+  * b. Are there unnecessary copies in some cases? No
 
 
 Using the move semantics
