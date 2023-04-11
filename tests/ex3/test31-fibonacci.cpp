@@ -19,6 +19,9 @@ unsigned fibonacci_runtime(unsigned i)
 // used at compile-time.
 
 // Question: explain why you need `if constexpr`.
+// constexpr est utilisé dans le cas d'une compilation pour ne pas faire bugguer le compilateur
+// supposons qu'on veut le length d'un objet ainsi que l'appelle d'une fonction length
+// il va confondre les 2
 
 TEST_CASE("The function `content_of_same_type` works as expected. ")
 {
